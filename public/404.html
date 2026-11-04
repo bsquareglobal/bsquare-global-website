@@ -1,1 +1,15 @@
-<!doctype html><html><head><meta charset="utf-8"><script>const path=location.pathname+location.search+location.hash;location.replace('/?p='+encodeURIComponent(path));</script></head><body></body></html>
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BSquare Global</title></head>
+<body>
+<script>
+  const path = location.pathname;
+  const isGitHubProjectSite = location.hostname.endsWith('github.io');
+  const firstSegment = path.split('/').filter(Boolean)[0] || '';
+  const base = isGitHubProjectSite && firstSegment ? `/${firstSegment}/` : '/';
+  const route = path.startsWith(base) ? path.slice(base.length) : path.replace(/^\//, '');
+  const destination = `${base}?p=${encodeURIComponent('/' + route + location.search + location.hash)}`;
+  location.replace(destination);
+</script>
+</body>
+</html>
