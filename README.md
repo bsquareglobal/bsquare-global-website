@@ -71,3 +71,9 @@ Social:
 - `/admin` (private login; not shown in main navigation)
 
 Note: GitHub Pages does not provide server-side route rewrites by default. If direct navigation to nested routes returns 404, configure a 404.html SPA fallback or use HashRouter. Test all deep links on the final custom domain.
+
+
+## Visual redesign (Obry-inspired)
+The current visual system has been redesigned with an editorial, bold-typography layout inspired by the supplied Obry demo reference. It uses BSquare Global's own logo and image assets hosted on the official `bsquareglobal.com` website, and the existing four public pages remain: Home, Projects, Gallery and Contact. The private Admin route remains available.
+
+The starter project and gallery images point to BSquare Global's official WordPress media URLs. They can be replaced with the company's preferred approved project images through the Admin area after Supabase and Cloudinary are configured.

@@ -1,21 +1,30 @@
+const wp = 'https://bsquareglobal.com/wp-content/uploads/2025/08/'
+const photos = [
+  `${wp}theatre003-1024x628.jpg`,
+  `${wp}theatre004-1024x628.jpg`,
+  `${wp}theatre005-1024x628.jpg`,
+  `${wp}theatre009-1024x628.jpg`,
+  `${wp}theatre006-1024x628.jpg`,
+  `${wp}theatre007-1024x628.jpg`,
+  `${wp}theatre008-1024x628.jpg`,
+  `${wp}theatre006A-1024x628.jpg`,
+]
 export const services = [
-  { title: 'Smart Theatre', text: 'Advanced educational spaces with immersive audio-visual systems for learning, seminars, presentations, conferences and video screening.', image: 'https://images.unsplash.com/photo-1567593810070-7a3d471af022?auto=format&fit=crop&w=1200&q=85' },
-  { title: 'Home Theatre', text: 'Personal cinema environments designed around premium projection, immersive sound, acoustics and comfort.', image: 'https://images.unsplash.com/photo-1608178398319-48f814d0750c?auto=format&fit=crop&w=1200&q=85' },
-  { title: '12D Theatre', text: 'Immersive entertainment experiences integrating motion, visuals and special effects.', image: 'https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=1200&q=85' },
-  { title: 'Smart Home', text: 'Connected living experiences with integrated control for lighting, entertainment and everyday convenience.', image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85' },
-  { title: 'Smart Office', text: 'Intelligent meeting and collaboration environments with professional AV integration.', image: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85' },
-  { title: 'Smart Events', text: 'Audio-visual technology and professional systems for presentations, conferences and live experiences.', image: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=1200&q=85' },
+  { title: 'Smart Theatre', text: 'Build a revolutionary education space for learning, seminars, presentations, conferences, and video screening.', image: photos[0] },
+  { title: 'Home Theatre', text: 'Create a private cinema experience with immersive visuals, powerful sound and thoughtfully designed interiors.', image: photos[3] },
+  { title: '12D Theatre', text: 'Bring entertainment to life with immersive theatre experiences and special effects.', image: photos[6] },
+  { title: 'Smart Home', text: 'Connected living experiences with integrated control for lighting, entertainment and everyday convenience.', image: 'https://bsquareglobal.com/wp-content/uploads/2025/08/smart-theatre-111-1014x1024.png' },
+  { title: 'Smart Office', text: 'Intelligent meeting and collaboration environments with professional AV integration.', image: photos[1] },
+  { title: 'Smart Events', text: 'Audio-visual technology and professional systems for presentations, conferences and live experiences.', image: photos[4] },
 ]
 export const packages = [
-  { name:'Economic', price:'₹3–5 Lakh', features:['Compact designs for small spaces','Branded, affordable AV equipment','Simple, elegant seating','Easy installation and maintenance'] },
-  { name:'Premium', price:'₹5–9 Lakh', features:['Premium seating and interiors','Enhanced sound with acoustic panels','Smart lighting and ambience control','4K projection options'] },
-  { name:'Luxury', price:'₹9–15 Lakh', features:['4K projection and Dolby Atmos options','Luxury recliner seating','High-end acoustic treatments','Smart automation and cinematic interiors'], featured:true },
+  { name:'Economic', price:'₹3–5 Lakh', features:['Economic solutions without quality compromise','Compact designs for small spaces','Branded yet affordable audio-visual equipment','Simple but elegant seating options','Easy installation & maintenance'] },
+  { name:'Premium', price:'₹5–9 Lakh', features:['Modern interiors with premium seating','Enhanced sound systems with acoustic panels','Smart lighting & ambiance control','4K projection systems for crystal-clear visuals','Comfort-focused layouts with stylish aesthetics'] },
+  { name:'Luxury', price:'₹9–15 Lakh', features:['4K projection & Dolby Atmos sound','Luxury recliner seating with massage features','High-end acoustic treatments for perfect sound','Smart automation for lights, sound, and A/C','Cinematic interiors for a true theatre feel'], featured:true },
 ]
 export const starterProjects = [
-  { id:'sample-smart-theatre', project_name:'Smart Theatre Environments', location:'India', short_description:'Transforming traditional classrooms into dynamic learning and presentation spaces.', main_image_url:'https://images.unsplash.com/photo-1567593810070-7a3d471af022?auto=format&fit=crop&w=1400&q=85', status:'published', show_on_homepage:true },
-  { id:'sample-home-cinema', project_name:'Private Cinema Experiences', location:'India & UAE', short_description:'Immersive home cinema spaces designed for entertainment and comfort.', main_image_url:'https://images.unsplash.com/photo-1608178398319-48f814d0750c?auto=format&fit=crop&w=1400&q=85', status:'published', show_on_homepage:true },
-  { id:'sample-av-integration', project_name:'Professional AV Integration', location:'UAE', short_description:'Integrated audio-visual solutions for professional environments.', main_image_url:'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=85', status:'published', show_on_homepage:false },
+  { id:'sample-smart-theatre', project_name:'Smart Theatre', location:'India & UAE', short_description:'An advanced educational space for learning, seminars, presentations, conferences and video screening.', main_image_url:photos[0], status:'published', show_on_homepage:true },
+  { id:'sample-home-cinema', project_name:'Home Theatre', location:'India & UAE', short_description:'Private cinema environments designed for immersive entertainment and comfort.', main_image_url:photos[3], status:'published', show_on_homepage:true },
+  { id:'sample-av-integration', project_name:'Smart Theatre Auditorium', location:'India', short_description:'Transforming traditional classrooms into dynamic learning environments.', main_image_url:photos[5], status:'published', show_on_homepage:false },
 ]
-export const starterGallery = [
-  ...services.slice(0,6).map((s,i)=>({id:`sample-${i}`, image_url:s.image, caption:s.title, status:'published'}))
-]
+export const starterGallery = photos.map((url,i)=>({id:`bsquare-gallery-${i+1}`,image_url:url,caption:['Smart Theatre','Smart Theatre Auditorium','Presentation & Conference','Home Theatre','Learning Environment','Smart Theatre','Theatre Seating','Immersive Theatre'][i],status:'published'}))
